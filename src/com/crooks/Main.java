@@ -34,8 +34,18 @@ public class Main {
                 response.redirect("/");                             // redirect to "/"
                 return "";                                          // required to return something but since were redirecting a blank is sufficient
             }
-
     ));
+
+    Spark.post(
+            "/logout",
+            (request, response) -> {
+                user = null;
+                response.redirect("/");
+                return "";
+            }
+    );
+
+
 
     }
 }
