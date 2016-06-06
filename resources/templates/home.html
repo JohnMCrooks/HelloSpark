@@ -5,13 +5,18 @@
     <title>Title</title>
 </head>
 <body>
-Hello, {{name}}!
-<br>
-<br>
-<form action="/logout" method="post">
-    <button type="submit">Logout</button>
+    Hello, {{name}}!
 
-</form>
+    <br>
+        <form action="/logout" method="post">
+            <button type="submit">Logout</button>
 
+        </form>
+
+    <ol>
+    {{#users}}
+    <li>{{name}}</li>
+    {{/users}}
+    </ol>
 </body>
 </html>
